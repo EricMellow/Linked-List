@@ -2,6 +2,18 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+*,
+*: after,
+*: before {
+  box-sizing: border-box;
+}
+
+.clearffix: after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 /*Main section*/
 .main {
   height: 100vh;
@@ -16,23 +28,35 @@
   align-content:center;
 }
 
+header {
+  width: 80%;
+  text-align: center;
+}
+
 h1 {
+  display: inline-block;
   color: #FFF;
-  font-size: 10vh;
-  margin: 3vh;
+  font-size: 5.5vw;
+  margin: 3vh 0;
 }
 
 img {
-  height: 10vh;
+  display: inline-block;
+  height: 4.5vw;
+  margin: 0 2.5%; 
 }
 
 input {
   display: block;
-  width: 80%;
-  height: 6vh;
+  width: 78%;
+  height: 5vh;
   margin: 3vh;
-  font-size: 5vh;
+  font-size: 4vh;
   padding-left: 1%;
+}
+
+.website-title {
+  margin-top: 5vh;
 }
 
 ::placeholder {
@@ -43,7 +67,7 @@ input {
   background-color: #FFC107;
   color: #FFF;
   height: 6vh;
-  width: 81%;
+  width: 80%;
   margin: 3vh;
   font-size: 3vh;
   font-weight: 800;
@@ -61,6 +85,9 @@ input {
   float: right;
   width: 50%;
   background-color: #CFD8DC;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*.bookmarks-read {
@@ -68,17 +95,35 @@ input {
 }*/
 
 article {
+  display: block;
   border: 2px solid #607D8B; 
+  width: 90%;
+  height: 20%;
+  min-height: 125px;
+  margin: 3vh;
+  background-color: #FFF;
 }
 
 h2 {
   color: #455A64;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 2%;
+  margin-left: 3%;
+  height: 20%
 }
 
 p {
+  display: block;
   color: #607D8B;
   text-decoration: underline #F2F4F4;
+  font-size: 3vh;
+  border-top: 2px solid #CFD8DC;
+  border-bottom: 2px solid #CFD8DC;
+  width: 90%;
+  margin: auto;
+  padding: 3% 0 4% 0;
+  height: 20%
 }
 
 p:hover {
@@ -87,6 +132,11 @@ p:hover {
   font-weight: 800;
 }
 
+div {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
 /*.url-read {
   text-decoration: underline #CFD8DC;
 }*/
@@ -96,8 +146,15 @@ hr {
 }
 
 .read-button {
+  display: flex;
   color: #455A64;
   text-decoration: underline #F2F4F4;
+  display: inline-block;
+  justify-content: space-between;
+  /*align-content: flex-start;*/
+  border: none;
+  font-size: 2vh;
+  margin: 1% 0 0 4%;
 }
 
 .read-button:hover {
@@ -111,10 +168,40 @@ hr {
 }*/
 
 .delete-button {
+  display: flex;
   color: #455A64;
   text-decoration: underline #F2F4F4;
+  display: inline-block;
+  /*align-content: flex-end;*/
+  border: none;
+  font-size: 2vh;
+  margin: 1vh 4% 0 0;
 }
 
 .delete-button:hover {
   text-decoration: underline #FFC107;
+}
+
+@media screen and (max-width: 550px) and (min-height: 484px) {
+  .container {
+    height: 100%;
+  }
+
+  .main {
+    display: block
+    float: none;
+    height: 50vh;
+    width: 100%;
+  }
+
+  .bookmarks {
+  height: 50vh;
+  display: block;
+  float: none;
+  width: 100%;
+  background-color: #CFD8DC;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
 }
