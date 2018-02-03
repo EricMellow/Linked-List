@@ -3,24 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Linked List</title>
+
   <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="style.css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
 </head>
 <body>
 
   <section class = "main">
     <header>
-      <h1>Linked<img src="linked-list-logo.svg">List</h1>
+      <h1>Linked<img src="linked-list-logo.svg" >List</h1>
     </header>
-    <input type="text" name="website-title" class="website-title">
-    <input type="text" name="website-url" class="website-url">
-    <button class = "enter-button">Enter</button>
+    <input type="text" name="website-title" class="website-title" placeholder="Website Title">
+    <input type="text" name="website-url" class="website-url" placeholder="Website URL">
+    <input type="submit" class="enter-button" value="Enter">
+    <!-- <button class = "enter-button">Enter</button> -->
   </section>
-<section class = "bookmarks">
+
+<section class = "bookmarks" class="bookmarks-read">
   <article>
-    <h2 class="website-output"></h2>
-    <p class = "url-output"><a href=""></p>
-      <button class="read-button">Read</button>
+    <h2 class="website-output">The Website Title</h2>
+    <hr />
+    <p class = "url-output" class="url-read"><a href="">www.thewebsiteurl.com</p>
+      <hr />
+      <button class="read-button" class="read-read">Read</button>
       <button class="delete-button">Delete</button>
   </article>
 </section>
