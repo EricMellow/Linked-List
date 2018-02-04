@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.clearffix: after {
+.clearfix: after {
   content: '';
   display: table;
   clear: both;
@@ -88,11 +88,20 @@ input {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  overflow-y: auto;
 }
 
-/*.bookmarks-read {
+.bookmarks-read {
   background-color: #F2F4F4;
-}*/
+}
+
+.url-read{
+  text-decoration: underline #CFD8DC;
+}
+
+.read-read {
+  color: #F05A28;
+}
 
 article {
   display: block;
@@ -137,9 +146,6 @@ div {
   display: flex;
   justify-content: space-between;
 }
-/*.url-read {
-  text-decoration: underline #CFD8DC;
-}*/
 
 hr {
   color: #CFD8DC;
@@ -162,10 +168,6 @@ hr {
   text-decoration: underline #FFC107;
   font-weight: 800;
 }
-
-/*.read-read {
-  color: #F05A28;
-}*/
 
 .delete-button {
   display: flex;
