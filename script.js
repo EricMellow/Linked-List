@@ -9,37 +9,23 @@ var deleteButton = document.querySelector('.deletebutton');
 // webTitle.addEventListener('keyup', );
 // webURL.addEventListener('keyup', urlValidation);
 enterButton.addEventListener('click', ConstructBookmark);
-// readButton.addEventListener('click', markRead);
-// deleteButton.addEventListener('click', deleteBookmark);
-
-$('.read-button').on('click', function() {
-  $('.read-button').toggleClass('read-read', addOrRemove);
-});
+readButton.addEventListener('click', markRead);
+deleteButton.addEventListener('click', deleteBookmark);
 
 
 function ConstructBookmark() {
-  $('.puppies').clone().removeAttr('class').appendTo('aside');
-  var newTitle = $('.website-title').val()
+  $('.bookmarks-article').clone().removeAttr('class').appendTo('aside');
+  var newTitle = $('.website-title').val();
   $('h2').text(newTitle);
-  var newURL = $('.website-url').val()
+  var newURL = $('.website-url').val();
   $('p').text(newURL);
-
-  // var newH2 = document.querySelector('.website-output');
-  // newH2.text('.website-output') = webTitle;
 };
 
-// function ConstructBookmark() {
-//   document.createElement('puppies');
-// }
+function markRead() {
+    readButton.classList.add('read-read');
+    console.log('works');
+};
 
-
-
-
-// var newBookmark = document.createElement('article');
-//   var newTitle = document.createTextNode(webTitle);
-//   var newURL = document.createTextNode(webURL);
-
-//   newBookmark.appendChild(newTitle, newURL);
-
-//   var newArticle = document.querySelector('article');
-//   document.body.insertBefore(newArticle, newBookmark);
+function deleteBookmark() {
+  $('.bookmarks-article').remove();
+};
