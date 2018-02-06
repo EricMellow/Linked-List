@@ -1,31 +1,51 @@
-var webTitle = document.querySelector('.website-title').value;
-var webURL = document.querySelector('.website-url').value;
-var enterButton = document.querySelector('.enter-button');
-var readButton = document.querySelector('.read-button');
-var deleteButton = document.querySelector('.deletebutton');
+// var webTitle = $('.website-title').val();
+// var webURL = $('.website-url').val();
+var enterButton = $('.enter-button');
+var readButton = $('.read-button');
+var rightSide = $('.bookmarks');
+var deleteButton = $('.delete-button');
 
 
 
 // webTitle.addEventListener('keyup', );
 // webURL.addEventListener('keyup', urlValidation);
-enterButton.addEventListener('click', ConstructBookmark);
-readButton.addEventListener('click', markRead);
-deleteButton.addEventListener('click', deleteBookmark);
+enterButton.on('click', ConstructBookmark);
+$('aside').on('click', '.read-button', markRead);
+$('aside').on('click', '.delete-button', deleteBookmark);
 
 
 function ConstructBookmark() {
-  $('.bookmarks-article').clone().removeAttr('class').appendTo('aside');
   var newTitle = $('.website-title').val();
-  $('h2').text(newTitle);
   var newURL = $('.website-url').val();
-  $('p').text(newURL);
+  if (newTitle === "") {
+    alert('Please enter a title')
+  } else if (newURL === "") {
+    alert('Please enter a URL')
+  } else {
+  rightSide.append(`<article class="bookmarks-article">
+    <h2 class="website-output">${newTitle}</h2>
+    <p class = "url-output" class="url-read"><a href="">${newURL}</a></p>
+      <div>
+      <button class="read-button">Read</button>
+      <button class="delete-button">Delete</button>
+    </div>
+  </article>`)
+  focusCursor();
+  $('.website-title').val() = '';
+  newURL.val() = ("");
+};
 };
 
+function focusCursor() {
+  $('.website-title').focus();
+}
+
 function markRead() {
-    readButton.classList.add('read-read');
+    $(this).closest('article').toggle('read-read');
     console.log('works');
 };
 
 function deleteBookmark() {
-  $('.bookmarks-article').remove();
+  // $(this).closest('article').remove();
+  $(this).closest('article').toggle('read-read');
 };

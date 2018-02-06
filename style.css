@@ -89,6 +89,7 @@ input {
   justify-content: center;
   flex-wrap: wrap;
   overflow-y: auto;
+  align-content: flex-start;
 }
 
 .bookmarks-read {
@@ -117,7 +118,7 @@ h2 {
   color: #455A64;
   font-weight: 700;
   font-size: 20px;
-  padding: 2%;
+  padding: 2% 2% 1% 2%;
   margin-left: 3%;
   height: 20%
 }
@@ -131,7 +132,7 @@ p {
   border-bottom: 2px solid #CFD8DC;
   width: 90%;
   margin: auto;
-  padding: 3% 0 4% 0;
+  padding: 2% 0 2% 0;
   height: 20%
 }
 
@@ -184,7 +185,7 @@ hr {
   text-decoration: underline #FFC107;
 }
 
-@media screen and (max-width: 550px) and (min-height: 484px) {
+@media screen and (max-width: 550px, min-height: 484px) {
   .container {
     height: 100%;
   }
