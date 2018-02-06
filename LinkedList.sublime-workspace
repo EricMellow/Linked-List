@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"we",
+				"website-url"
+			],
+			[
+				"focus",
+				"focusCursor"
+			],
+			[
+				"webs",
+				"website-title"
+			],
+			[
 				"di",
 				"div\tTag"
 			],
@@ -123,7 +135,8 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1377,
+				"buffer_size": 1067,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -131,7 +144,8 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 3017,
+				"buffer_size": 3051,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -139,7 +153,7 @@
 			"file": "script.js",
 			"settings":
 			{
-				"buffer_size": 995,
+				"buffer_size": 1515,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -256,7 +270,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -265,15 +279,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1377,
+						"buffer_size": 1067,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								842,
+								842
 							]
 						],
 						"settings":
@@ -286,24 +300,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "style.css",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3017,
+						"buffer_size": 3051,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2748,
+								2748
 							]
 						],
 						"settings":
@@ -313,10 +327,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2302.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -331,15 +345,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 995,
+						"buffer_size": 1515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1498,
+								1498
 							]
 						],
 						"settings":
@@ -349,7 +363,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 58.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

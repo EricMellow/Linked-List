@@ -24,15 +24,15 @@ function ConstructBookmark() {
   } else {
   rightSide.append(`<article class="bookmarks-article">
     <h2 class="website-output">${newTitle}</h2>
-    <p class = "url-output" class="url-read"><a href="">${newURL}</a></p>
+    <p class = "url-output" class="url-read"><a href="${newURL}">${newURL}</a></p>
       <div>
       <button class="read-button">Read</button>
       <button class="delete-button">Delete</button>
     </div>
   </article>`)
   focusCursor();
-  $('.website-title').val() = '';
-  newURL.val() = ("");
+  $('.website-title').val('');
+  $('.website-url').val('');
 };
 };
 
@@ -41,8 +41,9 @@ function focusCursor() {
 }
 
 function markRead() {
-    $(this).closest('article').toggle('read-read');
-    console.log('works');
+    $(this).closest('button').toggleClass('read-read');
+    $(this).closest('article').toggleClass('bookmarks-read');
+    $(this).closest('p').toggleClass('url-read');
 };
 
 function deleteBookmark() {
