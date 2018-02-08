@@ -2,32 +2,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-*,
-*: after,
-*: before {
-  box-sizing: border-box;
-}
-
-.clearfix: after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
 /*Main section*/
-.main {
-  height: 100vh;
-  display: inline-block;
-  display: flex;
-  float: left;
-  background-color: #455A64;
-  width: 50%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content:center;
-}
-
 header {
   width: 80%;
   text-align: center;
@@ -55,13 +30,26 @@ input {
   padding-left: 1%;
 }
 
+.main {
+  height: 100vh;
+  display: inline-block;
+  display: flex;
+  float: left;
+  background-color: #455A64;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .website-title {
   margin-top: 5vh;
 }
 
 ::placeholder {
   color: #BEC0C2;
-  }
+}
 
 .enter-button {
   background-color: #FFC107;
@@ -77,28 +65,11 @@ input {
   background-color: #FFD773;
 }
 
+.enter-button:disabled {
+  background-color: #FFC107;
+}
+
 /*Bookmark section*/
-
-.bookmarks {
-  height: 100vh;
-  display: inline-block;
-  float: right;
-  width: 50%;
-  background-color: #CFD8DC;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  align-content: flex-start;
-}
-
-.bookmarks-read {
-  background-color: #F2F4F4;
-}
-
-.url-read{
-  text-decoration: underline #CFD8DC;
-}
 
 article {
   display: block;
@@ -122,7 +93,7 @@ h2 {
 p {
   display: block;
   color: #607D8B;
-  text-decoration: underline #F2F4F4;
+  text-decoration: underline #CFD8DC;
   font-size: 3vh;
   border-top: 2px solid #CFD8DC;
   border-bottom: 2px solid #CFD8DC;
@@ -132,7 +103,13 @@ p {
   height: 20%
 }
 
-p:hover {
+a {
+  color: #607D8B;
+  text-decoration: underline #F2F4F4;
+  font-size: 3vh;
+}
+
+.anchor:hover {
   color: #455A64;
   text-decoration: underline #FFC107;
   font-weight: 800;
@@ -144,8 +121,25 @@ div {
   justify-content: space-between;
 }
 
-hr {
-  color: #CFD8DC;
+.bookmarks {
+  height: 100vh;
+  display: inline-block;
+  float: right;
+  width: 50%;
+  background-color: #CFD8DC;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  align-content: flex-start;
+}
+
+.bookmarks-read {
+  background-color: #F2F4F4;
+}
+
+.url-read {
+  text-decoration: underline #CFD8DC;
 }
 
 .read-button {
@@ -160,15 +154,20 @@ hr {
   margin: 1% 0 0 4%;
 }
 
-.read-button:hover {
+.read-hov:hover {
   color: #455A64;
   text-decoration: underline #FFC107;
   font-weight: 800;
 }
 
-.read-read {
+.mark-read {
   color: #F05A28;
   font-weight: 800;
+  background-color: #F2F4F4;
+}
+
+.delete-read {
+  background-color: #F2F4F4;
 }
 
 .delete-button {
@@ -191,21 +190,56 @@ hr {
     height: 100%;
   }
 
+  h1 {
+    display: inline-block;
+    color: #FFF;
+    font-size: 28px;
+    margin: 5px auto 0 auto;
+  }
+
+  img {
+    display: inline-block;
+    height: 24px;
+    margin: 0 2.5%; 
+  }
+
+  input {
+    display: block;
+    width: 78%;
+    height: 10%;
+    margin: 3%;
+    font-size: 4vh;
+    padding-left: 1%;
+  }
+
+  .website-title {
+    margin-top: 20px;
+  }
+  .enter-button {
+    background-color: #FFC107;
+    color: #FFF;
+    height: 13%;
+    width: 80.5%;
+    margin: 3%;
+    font-size: 3vh;
+    font-weight: 800;
+  }
+
   .main {
     display: block
     float: none;
-    height: 50vh;
+    height: 40vh;
     width: 100%;
   }
 
   .bookmarks {
-  height: 50vh;
-  display: block;
-  float: none;
-  width: 100%;
-  background-color: #CFD8DC;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    height: 50vh;
+    display: block;
+    float: none;
+    width: 100%;
+    background-color: #CFD8DC;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
